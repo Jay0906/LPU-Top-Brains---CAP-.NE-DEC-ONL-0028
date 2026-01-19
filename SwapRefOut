@@ -1,0 +1,34 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+namespace RefOut
+{
+    public class Program
+    {
+        static void SwapRef(ref int a, ref int b)
+        {
+            int temp=a;
+            a=b;
+            b=temp;
+        }
+
+        static void SwapOut(int a, int b, out int x, out int y)
+        {
+            x=b;
+            y=a;
+        }
+        public static void Main()
+        {
+            System.Console.Write("Enter the no1. ");
+            int n1=int.Parse(Console.ReadLine()!);
+            System.Console.Write("Enter the no2. ");
+            int n2=int.Parse(Console.ReadLine()!);
+
+            int x,y;
+            System.Console.WriteLine($"Before Swapping: n1={n1} , n2={n2}");
+            //SwapRef(ref n1,ref n2);
+            SwapOut(n1,n2,out x,out y);
+            System.Console.WriteLine($"After Swapping:  n1={x} , n2={y}");
+            //System.Console.WriteLine($"After Swapping:  n1={n1} , n2={n2}");
+        }
+    }
+}
