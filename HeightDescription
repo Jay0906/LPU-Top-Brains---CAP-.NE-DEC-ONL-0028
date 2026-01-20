@@ -1,0 +1,22 @@
+using System;
+namespace HeightDescription
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            int h=int.Parse(Console.ReadLine()!);
+            if (h < 150)
+            {
+                System.Console.WriteLine("Short");
+            }else if(h>=150 && h < 180)
+            {
+                System.Console.WriteLine("Average");
+            }
+            else
+            {
+                System.Console.WriteLine("Tall");
+            }
+        }
+    }
+}
